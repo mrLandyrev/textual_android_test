@@ -41,9 +41,11 @@ class TestApp(App):
             else:
                 yield Label(self.response)
                 yield Question()
+                yield Question()
 
     @on(QuestionMessage)
     def question(self, message: QuestionMessage) -> None:
+        pass
         # self.loading = True
         # self.run_worker(self.process_query(message.query))
     
