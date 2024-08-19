@@ -19,6 +19,7 @@ class Question(Widget):
 
     def compose(self) -> ComposeResult:
         yield Input(value="secret word")
+        yield Input(value="secret word")
         yield Button()
 
     @on(Button.Pressed)
@@ -40,7 +41,6 @@ class TestApp(App):
                 yield LoadingIndicator()
             else:
                 yield Label(self.response)
-                yield Question()
                 yield Question()
 
     @on(QuestionMessage)
