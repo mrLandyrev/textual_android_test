@@ -44,8 +44,8 @@ class TestApp(App):
 
     @on(QuestionMessage)
     def question(self, message: QuestionMessage) -> None:
-        self.loading = True
-        self.run_worker(self.process_query(message.query))
+        # self.loading = True
+        # self.run_worker(self.process_query(message.query))
     
     async def process_query(self, query: str) -> None:
         def test():
